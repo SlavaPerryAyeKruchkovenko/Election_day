@@ -35,6 +35,18 @@ services:
     tty: true
     stdin_open: true
 
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres_container:5432/${POSTGRES_DB}
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
 volumes:
   pgdata:
     driver: local
