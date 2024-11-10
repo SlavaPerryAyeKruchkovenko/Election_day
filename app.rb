@@ -1,10 +1,13 @@
 # app.rb
 require 'sinatra'
 
-class Application < Sinatra::Base
+set :database_file, 'config/database.yml'
 
-  get '/' do
-    'It Works!'
+class Application < Sinatra::Base
+  set :default_content_type, 'application\json'
+
+  get '/ready' do
+    { status: true }.to_json
   end
 
 end

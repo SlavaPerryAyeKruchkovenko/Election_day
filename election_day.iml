@@ -23,6 +23,7 @@
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.15.0, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mustermann (v1.1.2, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.7.4, ruby-3.3.5-p100) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pg (v1.5.9, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v6.4.3, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.10, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-contrib (v2.5.0, ruby-3.3.5-p100) [gem]" level="application" />
@@ -37,5 +38,19 @@
     <orderEntry type="library" scope="PROVIDED" name="timeout (v0.4.2, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.6, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uri (v1.0.1, ruby-3.3.5-p100) [gem]" level="application" />
+  </component>
+  <component name="RakeTasksCache-v2">
+    <option name="myRootTask">
+      <RakeTaskImpl id="rake">
+        <subtasks>
+          <RakeTaskImpl id="app">
+            <subtasks>
+              <RakeTaskImpl description="Запуск Sinatra-приложения в продакшене" fullCommand="app:prod" id="prod" />
+              <RakeTaskImpl description="Запуск Sinatra-приложения с помощью Rack" fullCommand="app:start" id="start" />
+            </subtasks>
+          </RakeTaskImpl>
+        </subtasks>
+      </RakeTaskImpl>
+    </option>
   </component>
 </module>
