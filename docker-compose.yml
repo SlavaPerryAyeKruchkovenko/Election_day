@@ -4,12 +4,12 @@ services:
   postgres:
     image: postgres:latest
     container_name: postgres_container
-    environment:
+    env_file:
       - .env
     ports:
       - "5432:5432"
     volumes:
-      - ./pgdata:/var/lib/postgresql/data/pgdata
+      - ./pgdata:/var/lib/postgresql/data/
     deploy:
       resources:
         limits:
